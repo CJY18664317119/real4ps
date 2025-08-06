@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>产品展示</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .product {
+            display: flex;
+            margin-bottom: 30px;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .product-image {
+            flex: 0 0 300px;
+            margin-right: 20px;
+        }
+        .product-image img {
+            width: 100%;
+            height: auto;
+        }
+        .product-info {
+            flex: 1;
+        }
+        .product-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .product-description {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>产品展示</h1>
+        <div class="product">
+            <div class="product-image">
+                <img src="{{ url_for('static', filename='images/product1.jpg') }}" alt="产品图片">
+            </div>
+            <div class="product-info">
+                <h2 class="product-title">{{ product.title }}</h2>
+                <p class="product-description">{{ product.description }}</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
